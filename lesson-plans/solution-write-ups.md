@@ -31,8 +31,10 @@ Description, Syntax, Test Cases and Use Cases.
   - go over the README from [solution-write-ups](https://github.com/HackYourFutureBelgium/solution-write-ups)
   - read through the first 4 sections in the example from [solution-write-ups](https://github.com/HackYourFutureBelgium/solution-write-ups)
 - In small groups:
+
   - Complete the first 4 sections of the writeup for `Add up the Numbers ...`
   - You can use the most popular solution solution by **\_sir** to write your tests:
+
   ```js
   function addUp(num) {
     return (num * (num + 1)) / 2;
