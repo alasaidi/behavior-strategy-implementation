@@ -23,6 +23,18 @@ for (const solution of [secretSolution]) {
       expect(solution("ASDF")).toEqual("FDSA");
     });
     // write at least 5 more tests ...
+     it('should return ala for ala', () => {
+      expect(solution("ala")).toEqual("ala");
+    });
+    it("should return olleh for hello", () => {
+      expect(solution("hello")).toEqual("olleh");
+    });
+     it('should return roujnob for bonjour', () => {
+      expect(solution("bonjour")).toEqual("ruojnob");
+    });
+    it("should return idias for saidi", () => {
+      expect(solution("saidi")).toEqual("idias");
+    });
   });
 }
 

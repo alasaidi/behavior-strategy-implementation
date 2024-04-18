@@ -19,10 +19,10 @@ for (const solution of [secretSolution]) {
       expect(actual).toEqual([0]);
     });
     it("0 -> [0]", () => {
-      expect(solution(0)).toEqual([0]);
+      expect(secretSolution(0)).toEqual([0]);
     });
     it("1 -> [0, 1]", () => {
-      expect(solution(1)).toEqual([0, 1]);
+      expect(secretSolution(1)).toEqual([0, 1]);
     });
     // write at least 5 more tests ...
      it("2 -> [0,1,2]", () => {
