@@ -15,13 +15,13 @@ for (const solution of [secretSolution]) {
   // the main test suite for the function
   describe(solution.name + ": counts down to 0", () => {
     it("default parameter is 0 -> [0]", () => {
-      expect(solution()).toEqual([0]);
+      expect(secretSolution()).toEqual([0]);
     });
     it("0 -> [0]", () => {
-      expect(solution(0)).toEqual([0]);
+      expect(secretSolution(0)).toEqual([0]);
     });
     it("1 -> [1, 0]", () => {
-      expect(solution(1)).toEqual([1, 0]);
+      expect(secretSolution(1)).toEqual([1, 0]);
     });
     // write at least 5 more tests ...
 it("2 -> [2,1, 0]", () => {
