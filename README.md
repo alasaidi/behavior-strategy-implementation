@@ -108,49 +108,49 @@ Functions behavior is generally described using **documentation**, **unit tests*
 <summary><strong>Unit Tests (pass/fail assertions)</strong></summary>
 
 ```js
-import { repeatString } from './repeat-string.js';
+import { repeatString } from "./repeat-string.js";
 
-describe('repeats a string any number of times:', () => {
-  describe('an empty string', () => {
+describe("repeats a string any number of times:", () => {
+  describe("an empty string", () => {
     it('should repeat "" 0 times', () => {
-      expect(repeatString('', 0)).toEqual('');
+      expect(repeatString("", 0)).toEqual("");
     });
     it('should repeat "" 10 times', () => {
-      expect(repeatString('', 10)).toEqual('');
+      expect(repeatString("", 10)).toEqual("");
     });
     it('should repeat "" 100 times', () => {
-      expect(repeatString('', 100)).toEqual('');
+      expect(repeatString("", 100)).toEqual("");
     });
   });
-  describe('zero repetitions', () => {
+  describe("zero repetitions", () => {
     it('a non-empty string repeated 0 times -> ""', () => {
-      expect(repeatString('asdf', 0)).toEqual('');
+      expect(repeatString("asdf", 0)).toEqual("");
     });
     it('a longer string repeated 0 times -> ""', () => {
-      expect(repeatString('tommywalk', 0)).toEqual('');
+      expect(repeatString("tommywalk", 0)).toEqual("");
     });
   });
-  describe('standard use cases', () => {
-    it('should repeat a phrase 3 times', () => {
-      expect(repeatString('go to school', 3)).toEqual(
-        'go to schoolgo to schoolgo to school'
+  describe("standard use cases", () => {
+    it("should repeat a phrase 3 times", () => {
+      expect(repeatString("go to school", 3)).toEqual(
+        "go to schoolgo to schoolgo to school"
       );
     });
-    it('should repeat phrases with punctuation', () => {
+    it("should repeat phrases with punctuation", () => {
       expect(repeatString('"Go!", said Dr. Seuss?', 2)).toEqual(
         '"Go!", said Dr. Seuss?"Go!", said Dr. Seuss?'
       );
     });
-    it('should repeat strings with special characters', () => {
-      expect(repeatString('\\ \n \t s', 2)).toEqual('\\ \n \t s\\ \n \t s');
+    it("should repeat strings with special characters", () => {
+      expect(repeatString("\\ \n \t s", 2)).toEqual("\\ \n \t s\\ \n \t s");
     });
   });
-  describe('default values', () => {
-    it('should repeat 1 time by default (second parameter)', () => {
-      expect(repeatString('asdf')).toEqual('asdf');
+  describe("default values", () => {
+    it("should repeat 1 time by default (second parameter)", () => {
+      expect(repeatString("asdf")).toEqual("asdf");
     });
     it('should repeat "" by default (first parameter)', () => {
-      expect(repeatString()).toEqual('');
+      expect(repeatString()).toEqual("");
     });
   });
 });
@@ -162,14 +162,14 @@ describe('repeats a string any number of times:', () => {
 <summary><strong>Use Cases ("real-world" examples)</strong></summary>
 
 ```js
-import { repeatString } from './repeat-string.js';
+import { repeatString } from "./repeat-string.js";
 
-const userString = document.getElementById('user-text').value;
-const userRepetitions = Number(document.getElementById('user-number').value);
+const userString = document.getElementById("user-text").value;
+const userRepetitions = Number(document.getElementById("user-number").value);
 
 const repeatedInput = repeatString(userString, userRepetitions);
 
-document.getElementById('display-repeated').innerText = repeatedInput;
+document.getElementById("display-repeated").innerText = repeatedInput;
 ```
 
 </details>
@@ -282,9 +282,9 @@ Which language features and which lines of code can you use to make your strateg
   while loops are designed to check conditions, not iterate a fixed number of times
   this is not the simplest solution to read or maintain
 */
-const repeatString = (text = '', repetitions = 1) => {
+const repeatString = (text = "", repetitions = 1) => {
   const finalLength = text.length * repetitions;
-  let repeatedText = '';
+  let repeatedText = "";
   while (true) {
     if (repeatedText.length === finalLength) {
       break;
@@ -304,9 +304,9 @@ const repeatString = (text = '', repetitions = 1) => {
 /* the cleanest implementation for this strategy
   it uses the language feature designed for this type of strategy
 */
-const repeatString = (text = '', repetitions = 1) => {
+const repeatString = (text = "", repetitions = 1) => {
   const finalLength = text.length * repetitions;
-  let repeatedText = '';
+  let repeatedText = "";
   while (repeatedText.length < finalLength) {
     repeatedText += text;
   }
@@ -328,9 +328,9 @@ const repeatString = (text = '', repetitions = 1) => {
   this implementation uses a for loop like a while loop
   the computer doesn't care, but the intention is confusing for other devs
 */
-const repeatString = (text = '', repetitions = 1) => {
+const repeatString = (text = "", repetitions = 1) => {
   const finalLength = text.length * repetitions;
-  let repeatedText = '';
+  let repeatedText = "";
   for (; repeatedText.length < finalLength; ) {
     repeatedText += text;
   }
@@ -351,8 +351,8 @@ const repeatString = (text = '', repetitions = 1) => {
   while loops are designed to check conditions, not iterate a fixed number of times
   this is not the simplest solution to read or maintain
 */
-const repeatString = (text = '', repetitions = 1) => {
-  let repeatedText = '';
+const repeatString = (text = "", repetitions = 1) => {
+  let repeatedText = "";
   let count = 0;
   while (true) {
     if (count === repetitions) {
@@ -375,8 +375,8 @@ const repeatString = (text = '', repetitions = 1) => {
   easier to read and more conventional than the previous implementation
   maybe you find this easier to read than a for loop
 */
-const repeatString = (text = '', repetitions = 1) => {
-  let repeatedText = '';
+const repeatString = (text = "", repetitions = 1) => {
+  let repeatedText = "";
   let count = 0;
   while (count < repetitions) {
     repeatedText = repeatedText + text;
@@ -395,8 +395,8 @@ const repeatString = (text = '', repetitions = 1) => {
 /* the cleanest implementation for this strategy
   it uses the language feature designed for stepping
 */
-const repeatString = (text = '', repetitions = 1) => {
-  let repeatedText = '';
+const repeatString = (text = "", repetitions = 1) => {
+  let repeatedText = "";
   for (let count = 0; count < repetitions; count++) {
     repeatedText += text;
   }
@@ -414,9 +414,9 @@ const repeatString = (text = '', repetitions = 1) => {
 ```js
 // good old fashioned conditional blocks
 //  it takes more space but can be more clear to read
-const repeatString = (text = '', repetitions = 1) => {
+const repeatString = (text = "", repetitions = 1) => {
   if (repetitions === 0) {
-    return '';
+    return "";
   } else {
     return text + repeatString(text, repetitions - 1);
   }
@@ -431,8 +431,8 @@ const repeatString = (text = '', repetitions = 1) => {
 ```js
 // conditional statements without the blocks
 //  shorter, but still with helpful keywords
-const repeatString = (text = '', repetitions = 1) => {
-  if (repetitions === 0) return '';
+const repeatString = (text = "", repetitions = 1) => {
+  if (repetitions === 0) return "";
   else return text + repeatString(text, repetitions - 1);
 };
 ```
@@ -445,8 +445,8 @@ const repeatString = (text = '', repetitions = 1) => {
 ```js
 // in all it's ES6 two-line glory
 //  the shortest implementation, do you think it's easiest to read?
-const repeatString = (text = '', repetitions = 1) =>
-  repetitions === 0 ? '' : text + repeatString(text, nextRepetitions - 1);
+const repeatString = (text = "", repetitions = 1) =>
+  repetitions === 0 ? "" : text + repeatString(text, nextRepetitions - 1);
 ```
 
 </details>
@@ -460,7 +460,7 @@ const repeatString = (text = '', repetitions = 1) =>
 
 ```js
 // short and sweet, no room for mistakes
-const repeatString = (text = '', repetitions = 1) => text.repeat(repetitions);
+const repeatString = (text = "", repetitions = 1) => text.repeat(repetitions);
 ```
 
 </details>
@@ -470,9 +470,9 @@ const repeatString = (text = '', repetitions = 1) => text.repeat(repetitions);
 
 ```js
 // less clear and more complex, but still pretty clear to read
-const repeatString = (text = '', repetitions = 1) => {
+const repeatString = (text = "", repetitions = 1) => {
   const oneEntryPerRepetition = Array(repetitions).fill(text);
-  const repeatedString = oneEntryPerRepetition.join('');
+  const repeatedString = oneEntryPerRepetition.join("");
   return repeatedString;
 };
 ```
