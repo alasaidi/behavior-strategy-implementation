@@ -28,14 +28,29 @@ for (const solution of [secretSolution]) {
       // write the tests indicated by the comments
       describe("when set to lower case", () => {
         // when the text is an empty string
-        it(_, () => {
-          expect(solution(_, _)).toEqual(_);
+        it('an empty string -> ""', () => {
+          expect(solution("")).toEqual("");
         });
         // when the text is all upper case
+        it('shoult return ALA for ala when the text is upper case ', () => {
+          expect(solution("AlA", true)).toEqual("ala");
+        });
         // when the text is all lower case
+         it('shoult return ala for ALA when the text is lower case ', () => {
+          expect(solution("ala", false)).toEqual("ALA");
+        });
         // when the text is mixed upper and lower case
+        it('shoult return ala for ALA when the text is mixed case ', () => {
+          expect(solution("Ala", false)).toEqual("ALA");
+        });
         // when the text contains punctuation
+         it('shoult return ala for ALA when the text is mixed case ', () => {
+          expect(solution("saidi.", false)).toEqual(".IDIAS");
+        });
         // when the text contains numbers
+         it('shoult return ala for ALA when the text is mixed case ', () => {
+          expect(solution("saidi3.", false)).toEqual(".3IDIAS");
+        });
       });
       describe("when set to upper case", () => {
         // when the text is an empty string
