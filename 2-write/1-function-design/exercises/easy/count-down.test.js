@@ -50,3 +50,5 @@ it("2 -> [2,1, 0]", () => {
 // minified solution for testing your tests
 // prettier-ignore
 function secretSolution(a = 0) { if ("number" != typeof a) throw new TypeError("start is not a number"); if (!Number.isInteger(a)) throw new Error("start is not an integer"); if (0 > a) throw new RangeError("start is less than 0"); const b = []; for (let c = a; 0 <= c; c--)b.push(c); return b }
+
+
