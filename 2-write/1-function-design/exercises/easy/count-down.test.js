@@ -24,6 +24,26 @@ for (const solution of [secretSolution]) {
       expect(solution(1)).toEqual([1, 0]);
     });
     // write at least 5 more tests ...
+it("2 -> [2,1, 0]", () => {
+      expect(solution(2)).toEqual([2, 1, 0]);
+    });
+
+    it("3 -> [3,2,1, 0]", () => {
+      expect(solution(3)).toEqual([3,2,1, 0]);
+    });
+
+    it("4 -> [4,3,2,1, 0]", () => {
+      expect(solution(4)).toEqual([4,3,2,1, 0]);
+    });
+
+    it("5 -> [5,4,3,2,1, 0]", () => {
+      expect(solution(5)).toEqual([5,4,3,2,1, 0]);
+    });
+
+    it("6 -> [6,5,4,3,2,1, 0]", () => {
+      expect(solution(6)).toEqual([6,5,4,3,2,1, 0]);
+    });
+
   });
 }
 
