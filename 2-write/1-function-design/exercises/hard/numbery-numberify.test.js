@@ -15,16 +15,20 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-  describe(solution.name + "takes an array of strings and returns a new array of numbers", () => {
-    describe('default parameter is an empty array -> ""', () => {
-      it("empty array -> true", () => {
-        expect(solution([])).toEqual([]);
+  describe(
+    solution.name +
+      "takes an array of strings and returns a new array of numbers",
+    () => {
+      describe('default parameter is an empty array -> ""', () => {
+        it("empty array -> true", () => {
+          expect(solution([])).toEqual([]);
+        });
+        it("['1','2','b','6'] -> [1,2,6]", () => {
+          expect(solution(["1", "2", "b", "6"])).toEqual([1, 2, 6]);
+        });
       });
-      it("['1','2','b','6'] -> [1,2,6]", () => {
-        expect(solution(['1','2','b','6'])).toEqual([1,2,6]);
-      });
-    });
-  });
+    }
+  );
 }
 
 // minified solution for testing your tests

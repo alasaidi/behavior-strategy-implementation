@@ -18,14 +18,14 @@ for (const solution of [secretSolution]) {
   describe(solution.name + ": determines how similar two values are", () => {
     describe("when values are strictly equal", () => {
       it('two identical strings -> "strictly equal"', () => {
-        expect(solution("hello", "hello")).toEqual('strictly equal');
+        expect(solution("hello", "hello")).toEqual("strictly equal");
       });
       it('two identical numbers -> "strictly equal"', () => {
         // 1, 1.0
-         expect(solution(1,1)).toEqual('strictly equal');
+        expect(solution(1, 1)).toEqual("strictly equal");
       });
       it('two identical booleans -> "strictly equal"', () => {
-         expect(solution(true, true)).toEqual('strictly equal');
+        expect(solution(true, true)).toEqual("strictly equal");
       });
     });
     describe("when values have the same type", () => {
@@ -33,19 +33,19 @@ for (const solution of [secretSolution]) {
         expect(solution("hi", "hello")).toEqual("same type");
       });
       it('two different numbers -> "same type"', () => {
-        expect(solution(5,1)).toEqual("same type");
+        expect(solution(5, 1)).toEqual("same type");
       });
       it('two different booleans -> "same type"', () => {
-         expect(solution(true, false)).toEqual("same type");
+        expect(solution(true, false)).toEqual("same type");
       });
     });
     describe("when values are nothing alike", () => {
       it("values that are obviously different", () => {
-        expect(solution(null, 4)).toEqual('totally different');
+        expect(solution(null, 4)).toEqual("totally different");
       });
       it("values that can be confusing", () => {
         // "4" and 4
-        expect(solution("4", 4)).toEqual('totally different');
+        expect(solution("4", 4)).toEqual("totally different");
       });
     });
   });

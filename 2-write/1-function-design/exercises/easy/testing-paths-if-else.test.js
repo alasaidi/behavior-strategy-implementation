@@ -22,7 +22,7 @@ for (const solution of [secretSolution]) {
         expect(actual).toEqual(true);
       });
       it("numbers that are not 0 or NaN -> true", () => {
-        const actual = solution(3);;
+        const actual = solution(3);
         expect(actual).toEqual(true);
       });
       it("true -> true", () => {
@@ -31,19 +31,19 @@ for (const solution of [secretSolution]) {
     });
     describe("solution can identify falsy values", () => {
       it('"false" -> flase', () => {
-         expect(solution("false")).toEqual(false);
+        expect(solution("false")).toEqual(false);
       });
       it("0 -> false", () => {
-         expect(solution(0)).toEqual(false);
+        expect(solution(0)).toEqual(false);
       });
       it("NaN -> false", () => {
-         expect(solution(NaN)).toEqual(false);
+        expect(solution(NaN)).toEqual(false);
       });
       it("false -> false", () => {
-         expect(solution(false)).toEqual(false);
+        expect(solution(false)).toEqual(false);
       });
       it("undefined -> false", () => {
-         expect(solution(undefined)).toEqual(false);
+        expect(solution(undefined)).toEqual(false);
       });
       it("null -> false", () => {
         expect(solution(null)).toEqual(false);

@@ -22,10 +22,10 @@ for (const solution of [secretSolution]) {
   describe(solution.name + ": converts two booleans to binary", () => {
     it('true, true --> "11"', () => {
       const actual = solution(true, true);
-      expect(actual).toEqual('11');
+      expect(actual).toEqual("11");
     });
     it('true, false --> "10"', () => {
-      const actual = solution(true, false);;
+      const actual = solution(true, false);
       expect(actual).toEqual("10");
     });
     it('false, true --> "01"', () => {
