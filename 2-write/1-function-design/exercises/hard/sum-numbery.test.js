@@ -19,7 +19,10 @@ const mapFilterReduce = (arr) => {
   const castToNumber = (entry) => Number(entry);
 
   // fill in the array methods and pass in the correct logic
-  const sumOfNumberies = arr._(_)._(_)._(_, _);
+  const sumOfNumberies = arr
+    .map(castToNumber) // Convert each string to a number
+    .filter(isNotNaN)  // Filter out non-numeric values
+    .reduce(sumNumbers, 0); // Sum up the numeric values, starting from 0
 
   return sumOfNumberies;
 };
@@ -28,11 +31,20 @@ const mapFilterReduce = (arr) => {
 
 for (const solution of [
   secretSolution,
-  // mapFilterReduce,
+   mapFilterReduce,
 ]) {
-  describe(solution.name + ": _", () => {
-    describe("_", () => {
-      it("_", () => {});
+  describe(solution.name + " sums all numbery an array ", () => {
+    describe(" sums all numbery strings in an array of strings", () => {
+      it("empty", () => {
+expect(solution([])).toBe(0)
+ });
+
+
+ it("['1','2']->3", () => {
+expect(secretSolution(["1","2"])).toBe(3)
+      });
+
+
     });
   });
 }
