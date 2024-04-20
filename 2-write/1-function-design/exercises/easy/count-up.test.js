@@ -25,22 +25,21 @@ for (const solution of [secretSolution]) {
       expect(secretSolution(1)).toEqual([0, 1]);
     });
     // write at least 5 more tests ...
-     it("2 -> [0,1,2]", () => {
-      expect(solution(2)).toEqual([0,1,2]);
+    it("2 -> [0,1,2]", () => {
+      expect(solution(2)).toEqual([0, 1, 2]);
     });
     it("3 -> [0, 1,2,3]", () => {
-      expect(solution(3)).toEqual([0, 1,2,3]);
+      expect(solution(3)).toEqual([0, 1, 2, 3]);
     });
-     it("4 -> [0, 1,2,3,4]", () => {
-      expect(solution(4)).toEqual([0, 1,2,3,4]);
+    it("4 -> [0, 1,2,3,4]", () => {
+      expect(solution(4)).toEqual([0, 1, 2, 3, 4]);
     });
     it("5 -> [0, 1,2,3,4,5]", () => {
-      expect(solution(5)).toEqual([0, 1,2,3,4,5]);
+      expect(solution(5)).toEqual([0, 1, 2, 3, 4, 5]);
     });
-     it("6 -> [0, 1,2,3,4,5,6]", () => {
-      expect(solution(6)).toEqual([0, 1,2,3,4,5,6]);
+    it("6 -> [0, 1,2,3,4,5,6]", () => {
+      expect(solution(6)).toEqual([0, 1, 2, 3, 4, 5, 6]);
     });
-
   });
 }
 
