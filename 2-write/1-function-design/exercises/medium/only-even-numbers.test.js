@@ -12,9 +12,16 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-  describe(solution.name + ": _", () => {
-    describe("_", () => {
-      it("_", () => {});
+  describe(solution.name + "removes all odd numbers from an array of numbers", () => {
+    describe("removes all odd numbers from an emapty array", () => {
+      it("empty erray return emapty array", () => {
+        expect(solution([])).toEqual([])
+      });
+      
+      it("return an emapty array if all are odd numbers ", () => {
+        expect(solution([1, 3, 5, 7])).toEqual([])
+      });
+
     });
   });
 }
