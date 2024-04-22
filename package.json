@@ -27,5 +27,8 @@
     "eslint-plugin-spellcheck": "0.0.17",
     "jest-cli": "^26.6.3",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "study-lenses": "^0.0.179"
   }
 }
