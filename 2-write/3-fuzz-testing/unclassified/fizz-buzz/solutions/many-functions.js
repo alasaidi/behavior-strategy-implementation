@@ -1,14 +1,14 @@
 export const manyFunctions = (max = 0) => {
-  const threeDivides = (n) => _;
-  const fiveDivides = (n) => _;
-  const fifteenDivides = (n) => _;
+  const threeDivides = (n) => n % 3 === 0;
+  const fiveDivides = (n) =>  n % 5 === 0;
+  const fifteenDivides = (n) =>  n % 15 === 0;
 
   const FizzBuzzOrNumber = (num) => {
-    if (_) {
+    if (fifteenDivides(num)) {
       return "FizzBuzz";
-    } else if (_) {
+    } else if (threeDivides(num)) {
       return "Fizz";
-    } else if (_) {
+    } else if (fiveDivides(num)) {
       return "Buzz";
     } else {
       return num;
@@ -16,5 +16,5 @@ export const manyFunctions = (max = 0) => {
   };
 
   // https://stackoverflow.com/a/33352604
-  return [...Array(max).keys()].map(__);
+  return [...Array(max).keys()].map(FizzBuzzOrNumber);
 };

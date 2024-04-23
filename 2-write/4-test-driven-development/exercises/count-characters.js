@@ -13,4 +13,10 @@
  * countCharacters('hiiii'); // { h: 1, i: 4 }
  *
  */
-export const countCharacters = (text = "") => {};
+export const countCharacters = (text = "") => {
+    const counts = {};
+    for (const char of text) {
+        counts[char] = counts[char] ? counts[char] + 1 : 1;
+    }
+    return counts;
+};
