@@ -5,7 +5,10 @@ export const mapFilterReduce = (arr) => {
   const castToNumber = (entry) => Number(entry);
 
   // fill in the array methods and pass in the correct logic
-  const allValidNumbers = arr.map(castToNumber).filter(isNotNaN).reduce(sumNumbers, 0);
+  const allValidNumbers = arr
+    .map(castToNumber)
+    .filter(isNotNaN)
+    .reduce(sumNumbers, 0);
 
   return allValidNumbers;
 };

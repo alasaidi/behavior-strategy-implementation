@@ -20,11 +20,11 @@ for (const solution of [secretSolution]) {
         expect(actual).toEqual([]);
       });
       it("keeps all entries when all are passing", () => {
-        const actual = solution([{ pass:  true }, { pass:  true }]);
+        const actual = solution([{ pass: true }, { pass: true }]);
         expect(actual).toEqual([{ pass: true }, { pass: true }]);
       });
       it("removes all entries when all are not passing", () => {
-        const actual = solution([{pass: false }, { pass: false }]);
+        const actual = solution([{ pass: false }, { pass: false }]);
         expect(actual).toEqual([]);
       });
       it("removes only not-passing entries", () => {
@@ -33,10 +33,14 @@ for (const solution of [secretSolution]) {
           { pass: false },
           { pass: true },
         ]);
-        expect(actual).toEqual([{ pass: true },{ pass: true },]);
+        expect(actual).toEqual([{ pass: true }, { pass: true }]);
       });
       it("removes entries with a truthy, but not true, .pass value", () => {
-        const actual = solution([{ pass: 100 }, { pass: "hello" }, { pass: true }]);
+        const actual = solution([
+          { pass: 100 },
+          { pass: "hello" },
+          { pass: true },
+        ]);
         expect(actual).toEqual([{ pass: true }]);
       });
       it("removes entries with no .pass property", () => {
@@ -59,7 +63,11 @@ for (const solution of [secretSolution]) {
       it("does not modify the argument", () => {
         const arg = [{ pass: true }, { pass: false }, { hello: "good bye" }];
         solution(arg);
-        expect(arg).toEqual([{ pass: true }, { pass: false }, { hello: "good bye" }]);
+        expect(arg).toEqual([
+          { pass: true },
+          { pass: false },
+          { hello: "good bye" },
+        ]);
       });
     });
   });

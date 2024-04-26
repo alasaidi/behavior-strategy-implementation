@@ -12,17 +12,21 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-  describe(solution.name + "A function that takes an array of strings, reverses it, and combines the strings", () => {
-    describe("reverses and combines an array of strings strings", () => {
-      it("an ampty array->''", () => {
-        expect(solution([])).toEqual("")
-      });
+  describe(
+    solution.name +
+      "A function that takes an array of strings, reverses it, and combines the strings",
+    () => {
+      describe("reverses and combines an array of strings strings", () => {
+        it("an ampty array->''", () => {
+          expect(solution([])).toEqual("");
+        });
 
-      it("an ampty array->''", () => {
-        expect(solution(["ala","saidi"])).toEqual("saidiala")
+        it("an ampty array->''", () => {
+          expect(solution(["ala", "saidi"])).toEqual("saidiala");
+        });
       });
-    });
-  });
+    }
+  );
 }
 
 // minified solution for testing your tests

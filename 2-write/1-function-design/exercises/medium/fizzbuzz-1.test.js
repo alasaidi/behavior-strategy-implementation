@@ -52,7 +52,7 @@ for (const solution of [secretSolution]) {
         expect(solution(10)).toEqual(expectedValue);
       });
       // write more tests in this category
-       it('20 -> "buzz"', () => {
+      it('20 -> "buzz"', () => {
         expect(solution(20)).toEqual(expectedValue);
       });
     });
@@ -66,7 +66,7 @@ for (const solution of [secretSolution]) {
         expect(solution(30)).toEqual(expectedValue);
       });
       // write more tests in this category
-       it('45 -> "fizzbuzz"', () => {
+      it('45 -> "fizzbuzz"', () => {
         expect(solution(45)).toEqual(expectedValue);
       });
     });

@@ -1,7 +1,7 @@
 export const manyFunctions = (max = 0) => {
   const threeDivides = (n) => n % 3 === 0;
-  const fiveDivides = (n) =>  n % 5 === 0;
-  const fifteenDivides = (n) =>  n % 15 === 0;
+  const fiveDivides = (n) => n % 5 === 0;
+  const fifteenDivides = (n) => n % 15 === 0;
 
   const FizzBuzzOrNumber = (num) => {
     if (fifteenDivides(num)) {
