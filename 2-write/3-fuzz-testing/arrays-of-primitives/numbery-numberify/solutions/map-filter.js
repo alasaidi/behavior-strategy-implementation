@@ -3,6 +3,6 @@ export const mapFilter = (arr) => {
   const castToNumber = (entry) => Number(entry);
 
   const numbers = arr.map(castToNumber).filter(isNotNaN);
-  
+
   return numbers;
 };

@@ -21,7 +21,7 @@ const mapFilterReduce = (arr) => {
   // fill in the array methods and pass in the correct logic
   const sumOfNumberies = arr
     .map(castToNumber) // Convert each string to a number
-    .filter(isNotNaN)  // Filter out non-numeric values
+    .filter(isNotNaN) // Filter out non-numeric values
     .reduce(sumNumbers, 0); // Sum up the numeric values, starting from 0
 
   return sumOfNumberies;
@@ -29,22 +29,16 @@ const mapFilterReduce = (arr) => {
 
 // -------- your solutions --------
 
-for (const solution of [
-  secretSolution,
-   mapFilterReduce,
-]) {
+for (const solution of [secretSolution, mapFilterReduce]) {
   describe(solution.name + " sums all numbery an array ", () => {
     describe(" sums all numbery strings in an array of strings", () => {
       it("empty", () => {
-expect(solution([])).toBe(0)
- });
-
-
- it("['1','2']->3", () => {
-expect(secretSolution(["1","2"])).toBe(3)
+        expect(solution([])).toBe(0);
       });
 
-
+      it("['1','2']->3", () => {
+        expect(secretSolution(["1", "2"])).toBe(3);
+      });
     });
   });
 }

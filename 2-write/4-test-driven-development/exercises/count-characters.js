@@ -14,9 +14,9 @@
  *
  */
 export const countCharacters = (text = "") => {
-    const counts = {};
-    for (const char of text) {
-        counts[char] = counts[char] ? counts[char] + 1 : 1;
-    }
-    return counts;
+  const counts = {};
+  for (const char of text) {
+    counts[char] = counts[char] ? counts[char] + 1 : 1;
+  }
+  return counts;
 };

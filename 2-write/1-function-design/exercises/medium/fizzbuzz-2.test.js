@@ -67,7 +67,7 @@ for (const solution of [
   secretSolution,
   // whileLoop,
   // oneLineforLoop,
-   manySmallFunctions,
+  manySmallFunctions,
 ]) {
   describe(solution.name + ": fizzbuzz", () => {
     describe("numbers divisible by 3", () => {
